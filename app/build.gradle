@@ -32,15 +32,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 dependencies {
     //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:$coreVersion"
-
-    //concurrency
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
 
     //live data
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$livedataVersion"
